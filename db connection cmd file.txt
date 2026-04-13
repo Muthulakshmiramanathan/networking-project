@@ -1,0 +1,9 @@
+cat << 'EOF' | sudo tee /www/db.php
+
+Code:
+
+<?php
+$conn = new mysqli("127.0.0.1","myuser","mypassword","mydb");
+if($conn->connect_error) die("Connection failed");
+echo "Connected successfully";
+?>
