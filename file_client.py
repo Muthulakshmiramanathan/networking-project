@@ -1,3 +1,9 @@
+import socket
+import os
+
+HOST = '192.168.1.1'
+PORT = 5001
+
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 
