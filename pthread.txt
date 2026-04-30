@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <pthread.h>
+
+// Thread function
+void* task(void* arg) {
+    printf("Thread is running\n");
+    return NULL;
+}
+
+int main() {
+    pthread_t t;
+
+    // Create thread
+    pthread_create(&t, NULL, task, NULL);
+
+    // Wait for thread to finish
+    pthread_join(t, NULL);
+
+    printf("Main function ends\n");
+    return 0;
+}
